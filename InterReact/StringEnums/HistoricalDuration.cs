@@ -19,6 +19,7 @@ public sealed class HistoricalDuration : StringEnum<HistoricalDuration>
     public static HistoricalDuration EightHours { get; } = Create("28800 S");
     public static HistoricalDuration OneDay { get; } = Create("1 D");
     public static HistoricalDuration TwoDays { get; } = Create("2 D");
+    public static HistoricalDuration ThirtyDays { get; } = Create("30 D");
     public static HistoricalDuration OneWeek { get; } = Create("1 W");
     public static HistoricalDuration TwoWeeks { get; } = Create("2 W");
     public static HistoricalDuration OneMonth { get; } = Create("1 M");
@@ -26,4 +27,6 @@ public sealed class HistoricalDuration : StringEnum<HistoricalDuration>
     public static HistoricalDuration ThreeMonths { get; } = Create("3 M");
     public static HistoricalDuration SixMonths { get; } = Create("6 M");
     public static HistoricalDuration OneYear { get; } = Create("1 Y");
+
+    public static HistoricalDuration Custom(string data) => Create(data);
 }

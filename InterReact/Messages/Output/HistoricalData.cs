@@ -36,7 +36,7 @@ public sealed class HistoricalDataBar
 
     internal HistoricalDataBar(ResponseReader r)
     {
-        Date = r.ReadZonedDateTime(HistoricalData.DateTimePattern).ToInstant();
+        Date = Instant.FromUnixTimeSeconds(r.ReadLong());
         Open = r.ReadDouble();
         High = r.ReadDouble();
         Low = r.ReadDouble();

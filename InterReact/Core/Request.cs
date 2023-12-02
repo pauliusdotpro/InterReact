@@ -475,7 +475,7 @@ public sealed class Request
                 duration,
                 regularTradingHoursOnly,
                 dataType,
-                "1"); // return date as text
+                "2"); // return date as unix timestamp
 
         if (contract.SecurityType == SecurityType.Bag)
         {
